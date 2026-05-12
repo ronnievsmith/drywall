@@ -1,0 +1,346 @@
+html{
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-gap: 4px;
+	outline: 1px dashed #616161;
+	min-height: 100vh;
+	min-width: 0;
+	max-width: 2056px;
+}
+body > aside {
+	overflow: hidden;
+	min-width: 0;
+	grid-area: aside;
+	padding: 0px 24px;
+	transition: display 1s ease-in-out;
+}
+body > aside > details > summary {
+	font-family: monospace;
+	font-size: xx-large;
+	color:#2962ff;
+}
+body > aside > details > summary:hover {
+	cursor:pointer;
+}
+body > aside > section {
+    margin: 0px 12px 0px 12px;
+}
+body blockquote {
+	border-left: 4px solid rgba(41, 98, 255,0.2);
+	padding-left:24px;
+}
+body > footer {
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */
+	text-align: center;
+	grid-area: footer;
+}
+body > footer > section {
+    margin: 1em;
+    color: #9e9e9e;
+}
+body > header {
+	grid-area: header;
+}
+body blockquote {
+	margin: 12px 6px;
+}
+body figure {
+	margin: 12px 6px;
+}
+body > header > details ul {
+	position: relative;
+	display:flex;
+	flex-flow: wrap;
+	gap: 24px;
+	list-style-type: none;
+	min-width: 100%;
+	max-width: 100%;
+	padding: 0px;
+}
+body > header > details ul li {
+	display:inline-block;
+	min-width:84px;
+	padding: 12px;
+}
+body > header > details > summary:hover {
+	cursor:pointer;
+}
+body > header > details > summary {
+	position:relative;
+	text-align: center;
+	font-size: xx-large;
+	float: right;
+	margin-right: 24px;
+	color:#2962ff;
+	font-family: monospace;
+	font-size: xx-large;
+}
+body > header > details[open] summary {
+	
+	margin-right: initial;
+	margin-right: 24px;
+}
+body > header figure {
+	display:inline-flex;
+	align-items:center;
+	text-decoration: none;
+	color: inherit;
+    margin: 12px;
+    min-height: 56px;
+    max-width: 312px;
+}
+body > header > a > figure figcaption {
+    margin-left: 8px;
+    display:inline-block;
+}
+body > header > nav {
+	float:right;
+	display:inline-block;
+    flex: 1 1 auto;
+    text-align: right;
+    margin: 0px 24px;
+	margin: 12px 64px 12px 12px;
+}
+body > header > nav > ul li {
+	padding: 0px 12px;
+}
+body > main {
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */
+	margin:0px 18px 18px 18px;
+	grid-area: main;
+	
+	container-type: inline-size;
+}
+body > main h1:first-of-type {
+	margin-top: 0px;
+}
+main.main-container {
+	container-name: main-container;
+}
+
+body > nav {
+	overflow: hidden;  /* needed for scroll suppression */
+	min-width: 0;      /* needed for scroll suppression */    
+	font-weight: 300;
+	display: flex;
+	flex-flow: column nowrap;
+	grid-area: nav;
+	
+}
+body > nav:first-child {
+    padding-top:32px;
+}
+body > nav ul {
+	list-style: none;
+	margin: 0px 24px 24px 24px;
+    text-align: left;
+    padding:0px;
+}
+body > nav ul > li {
+	margin-top:16px;
+}
+body > nav > details > summary:hover {
+	cursor:pointer;
+}
+body > nav > details > summary {
+	font-size:xx-large;
+/*	padding: 16px 16px 0px 16px;*/
+	font-family: monospace;
+	font-size: xx-large;
+	color:#2962ff;
+}
+body > nav > details > ul {
+	margin:0px;
+}
+details ::marker {
+	float:right;
+}
+body > header > nav ul {
+	list-style-type: none;
+}
+
+body > nav ul {
+	list-style-type: none;
+}
+
+body > header > nav > ul > li > label {
+	display: flex;
+}
+
+body > nav > details > ul > li > label {
+	display: flex;
+}
+
+@media screen and (max-width: 1039px) {
+    body {
+        grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-columns: 1fr;
+    }
+	body > aside > details > summary {
+		list-style-type: initial;
+	}
+	body > aside > details[open] > summary {
+		list-style-type: none;
+	}
+
+	body > header > details {
+		margin-top: -80px;
+	}
+	body > header > details > summary {
+		margin-right: 84px;
+	    top: -42px;
+	    margin-top: 72px;
+		list-style-type: default;
+	    font-size: revert;
+	}
+	body > header > details[open] > summary {
+	    margin-right: 84px;
+	    margin-top: 72px;
+		list-style-type: default;
+	    font-size: revert;
+	}
+	body > header > details ul {
+/*		justify-content: end;*/
+	}
+	body > nav > details > summary {
+		list-style-type: default;
+		padding: 21px 16px 0px 16px;
+	}
+	body > nav > details[open] > summary {
+		list-style-type: default;
+		text-align:right;
+		margin-right:-24px;
+	}
+	body > nav > details[open]{
+		padding:0px 24px 24px 24px;
+		outline:1px solid black;
+		background: white;
+    	z-index: 1;
+	}
+    body > nav {
+    	position:absolute;
+    	top:0px;
+    	right:0px;
+    	max-width: 386px;
+    }
+    body > nav ul {
+	    padding-left: 0px;
+	}
+    body > header {
+        width:100%;
+    }
+    body > nav > details > ul:first-of-type li {
+    	display:block;
+    }
+    body > header > nav {
+    	display:none;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+	body {
+		grid-template-areas:
+		"header header header"
+		"nav main aside"
+		"footer footer footer";
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: auto 1fr auto;
+	}
+	body > aside {
+		margin-top: -24px;
+	}
+	body > aside > details {
+		max-width: 312px;
+	}
+	body > aside > details > summary {
+		list-style-type: "<";
+	}
+	body > aside > details[open] > summary {
+		list-style-type: ">";
+	}
+	body > header {
+		margin-bottom: -20px;
+	}
+    body > header > details {
+		position:relative;
+		text-align: right;
+		clear: both;
+		top: -59px;
+	}
+	body > header > details[open] {
+		top: initial;
+		top:-36px;
+	}
+	body > header > details[open] > summary {
+		top:-22px;
+	}
+	body > header > details > summary {
+		list-style-type: "<";
+		transform: rotate(-90deg);
+		margin-right: 24px;
+		left: -4px;
+	}
+	body > header > details[open] > summary {
+		/*  list-style-type: "△" ◱ △ ✕*/ 
+		list-style-type: "<";
+		transform: rotate(90deg);
+		left: initial;
+		margin-right: 24px;
+	}
+
+	body > header > details ul {
+		flex-flow: row;
+		justify-content: flex-end;
+	}
+	body > header > nav > ul {
+		display: flex;
+		align-items: center;
+	}
+	body > header > nav > ul li {
+		display:inline-block;
+	}
+	body > nav {
+		max-width: 240px;
+		margin:-24px 24px 0px 24px;
+	}
+    body > nav > details > summary {
+		list-style-type: "⋮";
+		margin-left: 16px;
+		top: -14px
+	}
+	body > nav > details > summary {
+		list-style-type: ">";
+	}
+	body > nav > details[open] > summary {
+		text-align:right;
+		background-color:initial;
+		list-style-type: "<";
+	}
+    body > nav > details > ul:first-of-type li {
+    	display:none;
+    }
+    body > header > nav ul li {
+    	display:inline-block;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+@container main-container (min-width: 1000px) {
+    main > section {
+        columns:2;
+    }
+}

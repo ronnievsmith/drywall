@@ -1,0 +1,40 @@
+/* Mobile First: Single Column */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  grid-template-columns: 1fr;  
+  min-height: 100svh; /* svh prevents "jumping" on mobile address bars */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Default: Landscape Image */
+  background-image: url('wall-wide.jpg');
+}
+
+/* Assign elements to areas */
+header { grid-area: header; }
+nav    { grid-area: nav;    }
+main   { grid-area: main;   }
+aside  { grid-area: aside;  }
+footer { grid-area: footer; }
+
+/* Desktop View: 3-Column Mid-section */
+@media (min-width: 768px) {
+  body {
+    background-image: url('wall-tall.jpg');
+    grid-template-areas: 
+      "header header header"
+      "nav    main   aside"
+      "footer footer footer";
+    /* Adjust columns: nav and aside get 200px, main takes the rest */
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+  }
+}
