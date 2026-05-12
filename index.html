@@ -66,6 +66,10 @@ h1 {
   align-items: center; /* Vertical centering */
   padding: 0 20px;
 }
+.text-first{
+  order: -1; /* This moves the caption above the image */
+  margin-bottom: 15px; /* Adds some breathing room before the image starts */
+}
 /* Switch to Wide for Landscape or Desktop */
 @media (orientation: landscape) {
   body {
@@ -91,7 +95,7 @@ h1 {
       <header>
         <figure>
           <img src="ronnie.jpg" alt="Headshot of Ronnie Smith" loading="lazy" width="312" height="312" class=round>
-          <figcaption>
+          <figcaption class=text-first>
             <strong>Ronnie Smith</strong><br> 
             Drywall Repair | Painter
           </figcaption>
@@ -105,7 +109,7 @@ h1 {
 
           <figure>
             <img src="hero.jpg" alt="Invisible drywall repair orange peel match" loading="lazy" width="1080" height="1350">
-            <figcaption>
+            <figcaption class=text-first>
               <strong>The "Dog Ate My Wall" Special:</strong> From jagged hole to invisible finish. 
               Matched the existing texture perfectly — no "halo" or hump left behind.
             </figcaption>
@@ -113,7 +117,7 @@ h1 {
           
           <figure>
             <img src="garage.jpg" width="1080" height="1350" alt="Large drywall repair from car impact in Baton Rouge garage" loading="lazy">
-            <figcaption>
+            <figcaption class=text-first>
               <strong>Major Impact Restoration:</strong> A car accidentally pushed through this garage wall into the bedroom behind it. 
               I handled the wall restoration — from the studs to the painted wall. Seamless, solid, and secure.
             </figcaption>
@@ -121,7 +125,7 @@ h1 {
           
           <figure class="process-shot">
             <img src="professionalism.jpg" width="1080" height="1350" alt="Professional prep work for popcorn ceiling removal in Baton Rouge" loading="lazy">
-            <figcaption>
+            <figcaption class=text-first>
               <strong>The Cleanest Pro in Town:</strong> Popcorn removal is messy, but my process isn't. 
               I spend the time to mask and protect your floors and furniture so your home stays spotless.
             </figcaption>
@@ -129,7 +133,7 @@ h1 {
 
           <figure class="expert-proof">
             <img src="skill.jpg" width="1080" height="1350" alt="Ronnie Smith showing custom drywall texture matching samples" loading="lazy">
-            <figcaption>
+            <figcaption class=text-first>
               <strong>The Mastery of Matching:</strong> I don't just 'patch' holes—I recreate your wall's DNA. 
               By testing different spray tips and mud consistencies, I ensure the repair is 100% invisible.
             </figcaption>
