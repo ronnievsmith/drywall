@@ -29,18 +29,38 @@
     <!-- /build -->
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('tall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
       .round {
         border-radius: 50%;
       }
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertical centering */
+  padding: 0 20px;
+}
+/* Switch to Wide for Landscape or Desktop */
+@media (orientation: landscape) {
+  body {
+    background-image: url('wide.jpg');
+  }
+}
     </style>
   </head>
   <body>
-    <header>
-      <div>Ronnie Smith Drywall</div>
+    <header class="main-header">
       <a href="tel:+12255373022">
         Call for a Quote
       </a>
-      <a href="sms:+12255373022?body=Hi Ronnie, I have a drywall repair quote request..." class="btn-text">
+      <a href="sms:+12255373022?body=Hi Ronnie, I have a drywall repair quote request..." class="cta-button">
         Text a Photo
       </a>
     </header>
