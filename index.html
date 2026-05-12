@@ -39,11 +39,26 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+figure {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center;    /* Center them horizontally */
+  text-align: center;     /* Center the text lines within the caption */
+  margin: 0;              /* Optional: removes default browser margins */
+}
+
+figure img {
+  max-width: 100%;        /* Ensures the image doesn't overflow */
+  height: auto;
+}
 h1 {
     font-size: 56px;
   }
       .round {
         border-radius: 50%;
+      }
+      .name-font {
+        font-size:xxx-large;
       }
 .main-header {
   display: flex;
