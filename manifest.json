@@ -1,0 +1,22 @@
+{
+  "short_name": "Ronnie Smith",
+  "name": "Ronnie Smith Drywall Repair",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#F9FAFB",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1E293B",
+  "description": "Invisible Drywall Repair and Texture Matching in Baton Rouge, Livingston, & Prairieville."
+}
