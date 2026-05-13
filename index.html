@@ -96,6 +96,9 @@ header a, .call-now-button, .cta-button {
   padding: 8px;
   color: white;
 }
+.desktop-only-text {
+    display: none;
+  }
       .round {
         border-radius: 50%;
       }
@@ -126,13 +129,16 @@ header a, .call-now-button, .cta-button {
   h1 {
     /*font-size: 48px;*/
   }
+  .desktop-only-text {
+    display: inline;
+  }
 }
     </style>
   </head>
   <body>
     <header class="main-header">
       <a href="tel:+12255373022" class="call-now-button">
-        Call Now
+        Call Now <span class=desktop-only-text>225 537 3022</span>
       </a>
       <a href="sms:+12255373022?body=Hi Ronnie, I have a drywall repair quote request..." class="cta-button">
         Text Photo for Estimate
