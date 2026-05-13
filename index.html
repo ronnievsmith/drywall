@@ -32,10 +32,50 @@
     <!-- /build -->
     <!-- build:include includes/local-business-jsonld.html -->
     <!-- /build -->
-    <!-- build:include includes/jsonld-search.html -->
-    <!-- /build -->
-    <!-- build:include includes/fonts.html -->
-    <!-- /build -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DrywallContractor",
+  "name": "Ronnie Smith Drywall Repair",
+  "image": "https://ronniesmithdrywall.com/favicon.png",
+  "@id": "https://ronniesmithdrywall.com",
+  "url": "https://ronniesmithdrywall.com",
+  "telephone": "+12255373022",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Prairieville",
+    "addressRegion": "LA",
+    "postalCode": "70769",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 30.3013, 
+    "longitude": -90.9632
+  },
+  "servesCrawl": [
+    "Baton Rouge",
+    "Prairieville",
+    "Gonzales",
+    "Denham Springs",
+    "Livingston"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "description": "Specializing in seamless drywall repair and expert texture matching. Making holes and cracks disappear in Baton Rouge and Prairieville."
+}
+</script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
 body {
